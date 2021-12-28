@@ -1,0 +1,144 @@
+* {
+
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #223851;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    box-sizing: border-box;
+
+}
+
+.sidebar {
+    background-color:#0B101A;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 15px;
+    width: 200px;
+    height: 100%;
+    float: right;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    vertical-align: center;
+
+
+}
+
+
+
+.color {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    background-color:#0B101A;
+    border-color: #03E9F4 !important;
+    padding: 0;
+
+}
+
+
+
+
+.size {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    background-color:#0B101A; ;
+    border-color: #03E9F4;
+    padding: 0;
+
+
+}
+
+.clear-btn {
+
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    background-color:#0B101A; ;
+    border-color: #03E9F4;
+    border-radius: 15px;
+
+}
+
+.save-btn {
+
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    background-color:#0B101A; ;
+    border-color: #03E9F4;
+    border-radius: 15px;
+
+}
+
+
+.container {
+
+
+    background-color:#0B101A;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 15px;
+    height: 100%;
+    width: 850px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+}
+
+.pixel {
+
+    background-color: white;
+    border-radius: 15px;
+}
+
+.outer {
+
+
+    height: 850px;
+    width: 190vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
+
+
+.height-200px {
+
+    height: 200px !important;
+}
+
+.text-size {
+
+    height: 58px;
+}
+
+

@@ -12,13 +12,34 @@ body {
 
 }
 
-.sidebar {
+.sidebar-right {
     background-color:#0B101A;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
     border-radius: 15px;
     width: 200px;
     height: 100%;
     float: right;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    vertical-align: center;
+
+
+}
+
+.sidebar-left {
+    background-color:#0B101A;
+    box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
+    border-radius: 15px;
+    width: 200px;
+    height: 100%;
+    float: left;
     position: relative;
     padding: 0;
     text-align: center;
@@ -88,10 +109,49 @@ body {
 }
 
 
+.pencil-btn {
+
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    background-color:#0B101A; ;
+    border-color: #03E9F4;
+    border-radius: 15px;
+
+}
+
+
+.eraser-btn {
+
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    background-color:#0B101A; ;
+    border-color: #03E9F4;
+    border-radius: 15px;
+
+}
+
+
+.bucket-btn {
+
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    background-color:#0B101A; ;
+    border-color: #03E9F4;
+    border-radius: 15px;
+
+}
+
+
 .container {
 
-    background-color:#0B101A;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: #223851;
+    box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
     border-radius: 15px;
     height: 100%;
     width: 850px;
@@ -112,7 +172,10 @@ body {
 
 .pixel {
 
-    background-color: white;
+    background-color: #0B101A;
+    border: solid 1px transparent;
+    border-radius: 2px;
+
 
 }
 

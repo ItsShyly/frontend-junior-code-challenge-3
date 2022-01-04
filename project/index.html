@@ -7,9 +7,11 @@
 </head>
 <body>
 
-
+<!--Outer Div with fixed size-->
 <div class="outer">
-    <div class="sidebar">
+
+    <!--Right Sidebar-->
+    <div class="sidebar-right">
 
         <div class="height-200px">
             <p>Color</p>
@@ -29,11 +31,22 @@
 
         <div class="height-200px">
             <div class="text-size"></div>
-            <button class="save-btn" type="button">Export</button>
+            <button class="save-btn" type="button" value="8" onclick="exportURL()">Export</button>
         </div>
 
     </div>
 
+    <!--Left Sidebar-->
+    <div class="sidebar-left">
+
+        <button class="pencil-btn" type="button" onclick="pencilTrue()">Pencil</button>
+
+        <button class="eraser-btn" type="button" onclick="eraserTrue()">Eraser</button>
+
+        <button class="bucket-btn" type="button" onclick="bucketTrue()">Bucket</button>
+    </div>
+
+    <!--Grid Container-->
     <div class="container">
     </div>
 

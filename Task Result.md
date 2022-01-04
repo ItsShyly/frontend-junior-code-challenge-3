@@ -9,6 +9,7 @@ I use the following technologies / frameworks in my project:
 - HTML
 
 I decided to use only Javascript, HTML and CSS, because I think that I don't need more for a pixel art generator.
+I also feel most confident with these technologies.
 I used Javascript for the functions like creating DIVs / pixels based on the selected grid size.
 I used HTML for creating the webpage and the GRID.
 I used CSS to design the webpage.

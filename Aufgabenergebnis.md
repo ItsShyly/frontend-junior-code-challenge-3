@@ -9,6 +9,7 @@ Folgende Technolgien / Frameworks setze ich in meinem Projekt ein:
 - HTML
 
 Ich habe mich hier nur für Javascript, HTML und CSS entschieden, da ich denke, dass ich mehr für ein Pixel Art Generator nicht benötige.
+Außerdem fühle ich mich mit diesen Technolgien am sichersten. 
 Javascript habe ich für die Funktionen benutzt, wie das Erstellen von DIVs / Pixeln anhand der asugewählten Grid Größe.
 HTML habe ich für das Erstellen der Webpage und des GRIDs vewendet. 
 CSS habe ich zum gestalten der Webpage habe ich.

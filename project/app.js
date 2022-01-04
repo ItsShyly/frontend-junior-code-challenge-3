@@ -187,7 +187,6 @@ function exportImage (type) {
   alert('no valid image type has been selected')
 }
 
-
 pixelEvents(8)
 
 

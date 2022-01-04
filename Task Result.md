@@ -4,40 +4,35 @@
 
 I use the following technologies / frameworks in my project:
 
-- JavaScript / jQuery
-- PHP / Symfony
-- ...
+- JavaScript 
+- CSS
+- HTML
 
-I chose jQuery because ...
+I decided to use only Javascript, HTML and CSS, because I think that I don't need more for a pixel art generator.
+I used Javascript for the functions like creating DIVs / pixels based on the selected grid size.
+I used HTML for creating the webpage and the GRID.
+I used CSS to design the webpage.
+
+The whole project is not Responsive and made only for PC.
 
 ## Used 3rd Party Libraries
 
-I use the following 3rd party libraries in my project: (if none, remove the table and explain why)
+I use the following 3rd party libraries in my project:
 
 Name | Reason
 --- | ---
-[moment.js](https://momentjs.com/) | For calculating dates and converting formats.
-[Bootstrap](https://getbootstrap.com/) | Simple RWD framework for designing the front end.
+[Dom To Image](https://github.com/tsayen/dom-to-image) | i use DOM to Image to turn Dom nodes to Images.
 
 ## Installation / Run
 
-Describe how we can check your project locally.
-
-For example:
 
 ---
-
-The following components must be installed locally:
-
-- [nodejs](https://nodejs.org/en/) v13.2.0
-- [.NET Core](https://dotnet.microsoft.com/download) v3.1
 
 To run the project locally, enter the following in the command line / bash:
 
 ```console
-$ git clone <linktorepository>
-$ cd <repositoryname>
-$ npm install
-$ npm run start
+$ git clone https://github.com/ItsShyly/frontend-junior-code-challenge-3.git
 ```
+After that, you can open up the index.html in your browser.
+
 ---

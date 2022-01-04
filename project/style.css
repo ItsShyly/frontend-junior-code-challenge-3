@@ -82,10 +82,9 @@ body {
 }
 
 
-
 .size:hover {
 
- background-color: rgba(255, 255, 255, 0.07);
+    background-color: rgba(255, 255, 255, 0.07);
 
 }
 
@@ -199,6 +198,7 @@ body {
 
 }
 
+
 .pixel {
 
     background-color: #0b101a;
@@ -223,7 +223,6 @@ body {
     margin: auto;
 
 }
-
 
 
 .height-10px {

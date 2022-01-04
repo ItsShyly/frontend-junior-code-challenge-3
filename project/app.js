@@ -1,14 +1,20 @@
 const container = document.querySelector('.container')
-const colorMain = document.querySelector('.pixel')
+const pencilBtn = document.querySelector('.pencil-btn')
+const eraserBtn = document.querySelector('.eraser-btn')
+const bucketBtn = document.querySelector('.bucket-btn')
 let colorInput = document.querySelector('.color')
 let sizeInput = document.querySelector('.size')
+
 const size = sizeInput.value
+const colorMain = '#0b101a'
+
+let pixels = []
 
 //set everything to false
-let draw = false
-let bucket = false
-let eraser = false
-let pencil = false
+let { draw, bucket, eraser, pencil } = false
+
+//activate pencil
+pencilTool()
 
 //take grid size from input
 function pixelEvents (size) {
@@ -19,6 +25,8 @@ function pixelEvents (size) {
     const div = document.createElement('div')
     div.classList.add('pixel')
 
+    pixels[i] = div
+
 //mousedown event
     div.addEventListener('mousedown', function () {
 
@@ -26,16 +34,28 @@ function pixelEvents (size) {
       draw = true
 
       //looking for what item is selected
-      if (pencil === true) {
+      if (pencil) {
         return div.style.backgroundColor = colorInput.value
-      } else {
-        if (bucket === true) {
-          return div.style.backgroundColor = 'red'
-        } else {
-          if (eraser === true) {
-            return div.style.backgroundColor = colorMain
+      }
+
+      if (bucket) {
+        const targetColor = div.style.backgroundColor
+
+        for (const pixelKey in pixels) {
+          const pixel = pixels[pixelKey]
+
+          if (pixel.style.backgroundColor !== targetColor) {
+            continue
           }
+
+          pixel.style.backgroundColor = colorInput.value
         }
+
+        return
+      }
+
+      if (eraser) {
+        return div.style.backgroundColor = colorMain
       }
 
     })
@@ -43,43 +63,28 @@ function pixelEvents (size) {
 //mouseover event
     div.addEventListener('mouseover', function () {
 
-
       //looking for what item is selected and draw only on mouse down / adding a border on hovering over a pixel
-      if (pencil === true) {
-        if (draw === true) {
-          return div.style.backgroundColor = colorInput.value
-
-        }
+      if (pencil && draw) {
+        div.style.backgroundColor = colorInput.value
         div.style.borderColor = colorInput.value
-      } else {
-        if (bucket === true) {
-          if (draw === true) {
-            return div.style.backgroundColor = 'red'
-          }
-          div.style.borderColor = 'red'
-        } else {
-          if (eraser === true) {
-            if (draw === true) {
-              return div.style.backgroundColor = colorMain
-            }
-            div.style.borderColor = colorMain
-          }
-        }
+
+        return
       }
 
+      if (eraser && draw) {
+        div.style.backgroundColor = colorMain
+        div.style.borderColor = colorMain
+      }
     })
 
 //mouseout event / prevent the pixels from keeping the border after the mouseover
     div.addEventListener('mouseout', function () {
       div.style.borderColor = "transparent"
 
-
     })
 
-
-
 //mouseup event / set draw to false when releasing the mousedown
-    div.addEventListener('mouseup', function () {
+    window.addEventListener('mouseup', function () {
       draw = false
     })
 
@@ -87,49 +92,104 @@ function pixelEvents (size) {
 
   }
 
+  console.log(pixels)
+
 }
 
-pixelEvents(size)
+//Set Pencil to true and make it active / deactivate other tools
+function pencilTool () {
 
-//Set Pencil to true
-function pencilTrue () {
+  pencilBtn.classList.add('active')
   pencil = true
+
+  eraserBtn.classList.remove('active')
   eraser = false
+
+  bucketBtn.classList.remove('active')
   bucket = false
+
 }
 
-//Set Eraser to true
-function eraserTrue () {
+//Set Eraser to true and make it active / deactivate other tools
+function eraserTool () {
+
+  pencilBtn.classList.remove('active')
   pencil = false
+
+  eraserBtn.classList.add('active')
   eraser = true
+
+  bucketBtn.classList.remove('active')
   bucket = false
 }
 
-//Set Bucket to True
-function bucketTrue () {
+//Set Bucket to true and make it active / deactivate other tools
+function bucketTool () {
+
+  pencilBtn.classList.remove('active')
   pencil = false
+
+  eraserBtn.classList.remove('active')
   eraser = false
+
+  bucketBtn.classList.add('active')
   bucket = true
 }
 
-//Side Reload
-function reload () {
+/// Clear/ Reload
+function resetGrid () {
 
   container.innerHTML = ''
   pixelEvents(size)
-  location.reload();
 
 }
 
-//html2canvas - save image
-function exportURL () {
+function changeGrid (size) {
 
-  //Funktion fehlt noch
-
-}
-
-function bucketTool () {
-
-//Funktion fehlt noch
+  container.innerHTML = ''
+  pixelEvents(size)
 
 }
+
+function downloadDataUrl (dataUrl, extension) {
+  const link = document.createElement('a')
+  link.download = new Date().getTime() + extension
+  link.href = dataUrl
+  link.click()
+}
+
+function exportImage (type) {
+  if (type === 'png') {
+
+    domtoimage.toPng(container).then(function (dataUrl) {
+      downloadDataUrl(dataUrl, '.png')
+    })
+    return
+  }
+
+  if (type === 'jpg') {
+
+    domtoimage.toJpeg(container).then(function (dataUrl) {
+      downloadDataUrl(dataUrl, '.jpg')
+    })
+    return
+  }
+
+  if (type === 'gif') {
+    domtoimage.toPng(container).then(function (dataUrl) {
+      dataUrl = dataUrl.replace('data:image/png;', 'data:image/gif;')
+      downloadDataUrl(dataUrl, '.gif')
+    })
+
+    return
+  }
+
+  alert('no valid image type has been selected')
+}
+
+
+pixelEvents(8)
+
+
+
+

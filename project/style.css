@@ -13,7 +13,7 @@ body {
 }
 
 .sidebar-right {
-    background-color:#0B101A;
+    background-color: #0b101a;
     box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
     border-radius: 15px;
     width: 200px;
@@ -34,7 +34,7 @@ body {
 }
 
 .sidebar-left {
-    background-color:#0B101A;
+    background-color: #0b101a;
     box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
     border-radius: 15px;
     width: 200px;
@@ -55,32 +55,37 @@ body {
 }
 
 
-
 .color {
     -webkit-appearance: none;
     width: 100px;
     height: 100px;
     text-align: center;
     color: white;
-    background-color:#0B101A;
-    border-color: #03E9F4 !important;
+    background-color: #0b101a;
+    border-color: #03e9f4 !important;
     padding: 0;
 
 }
 
 
-
-
 .size {
 
     width: 100px;
-    height: 100px;
+    height: 50px;
     text-align: center;
     color: white;
-    background-color:#0B101A; ;
-    border-color: #03E9F4;
+    background-color: #0b101a;;
+    border-color: #03e9f4;
     padding: 0;
+    border-radius: 15px;
 
+}
+
+
+
+.size:hover {
+
+ background-color: rgba(255, 255, 255, 0.07);
 
 }
 
@@ -90,8 +95,8 @@ body {
     height: 100px;
     text-align: center;
     color: white;
-    background-color:#0B101A; ;
-    border-color: #03E9F4;
+    background-color: #0b101a;;
+    border-color: #03e9f4;
     border-radius: 15px;
 
 }
@@ -99,11 +104,11 @@ body {
 .save-btn {
 
     width: 100px;
-    height: 100px;
+    height: 50px;
     text-align: center;
     color: white;
-    background-color:#0B101A; ;
-    border-color: #03E9F4;
+    background-color: #0b101a;;
+    border-color: #03e9f4;
     border-radius: 15px;
 
 }
@@ -115,9 +120,17 @@ body {
     height: 100px;
     text-align: center;
     color: white;
-    background-color:#0B101A; ;
-    border-color: #03E9F4;
+    background-color: #0b101a;;
+    border-color: #03e9f4;
     border-radius: 15px;
+    transition: 0.1s ease-in-out;
+
+}
+
+.pencil-btn.active {
+
+    background-color: #223851;
+    box-shadow: rgba(34, 56, 81, 0.47) 0 22px 90px 4px;
 
 }
 
@@ -128,9 +141,16 @@ body {
     height: 100px;
     text-align: center;
     color: white;
-    background-color:#0B101A; ;
-    border-color: #03E9F4;
+    background-color: #0b101a;;
+    border-color: #03e9f4;
     border-radius: 15px;
+
+}
+
+.eraser-btn.active {
+
+    background-color: #223851;
+    box-shadow: rgba(34, 56, 81, 0.47) 0 22px 90px 4px
 
 }
 
@@ -141,25 +161,35 @@ body {
     height: 100px;
     text-align: center;
     color: white;
-    background-color:#0B101A; ;
-    border-color: #03E9F4;
+    background-color: #0b101a;;
+    border-color: #03e9f4;
     border-radius: 15px;
 
 }
 
-
-.container {
+.bucket-btn.active {
 
     background-color: #223851;
-    box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
-    border-radius: 15px;
-    height: 100%;
-    width: 850px;
+    box-shadow: rgba(34, 56, 81, 0.47) 0 22px 90px 4px;
+
+}
+
+.outer-container {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
+    height: 100%;
+    width: 850px;
+}
+
+.container {
+
+    height: 100%;
+    background-color: #223851;
+    box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: repeat(var(--size), 1fr);
     grid-template-rows: repeat(var(--size), 1fr);
@@ -167,19 +197,18 @@ body {
     --size: 16;
 
 
-
 }
 
 .pixel {
 
-    background-color: #0B101A;
+    background-color: #0b101a;
     border: solid 1px transparent;
     border-radius: 2px;
 
 
 }
 
-.outer {
+body {
 
 
     height: 850px;
@@ -197,14 +226,9 @@ body {
 
 
 
-.height-200px {
+.height-10px {
 
-    height: 200px !important;
-}
-
-.text-size {
-
-    height: 58px;
+    height: 10px;
 }
 
 

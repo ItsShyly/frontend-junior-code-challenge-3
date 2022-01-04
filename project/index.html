@@ -2,55 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.min.css">
     <title>UDG Probeaufgabe</title>
 </head>
-<body>
+<body ondragstart="return false" ondrop="return false">
 
-<!--Outer Div with fixed size-->
-<div class="outer">
 
-    <!--Right Sidebar-->
-    <div class="sidebar-right">
+    <!--Left Sidebar-->
 
-        <div class="height-200px">
+
+    <div class="sidebar-left">
+
+        <div>
             <p>Color</p>
             <input class="color" type="color">
         </div>
 
-        <div class="height-200px">
-            <p>Grid size</p>
-            <input class="size" type="number" onchange="reload()">
 
+        <!--Grid Size buttons-->
+        <div>
+            <p>Grid Size:</p>
+            <button class="size" value="8" onclick="changeGrid (8)">8 x 8</button>
+                <div class="height-10px"></div>
+            <button class="size" value="12" onclick="changeGrid(12)">12 x 12</button>
+                <div class="height-10px"></div>
+            <button class="size" value="16" onclick="changeGrid (16)">16 x 16</button>
+                <div class="height-10px"></div>
+            <button class="size" value="32" onclick="changeGrid (32)">32 x 32</button>
         </div>
 
-        <div class="height-200px">
-            <div class="text-size"></div>
-            <button class="clear-btn" type="button" onclick="reload()">Clear</button>
-        </div>
 
-        <div class="height-200px">
-            <div class="text-size"></div>
-            <button class="save-btn" type="button" value="8" onclick="exportURL()">Export</button>
-        </div>
+        <!--Export version buttons-->
+
+        <div>
+            <p>Export as:</p>
+
+        <button class="save-btn" id="png" type="button" value="8" onclick="exportImage('png')">PNG</button>
+            <div class="height-10px"></div>
+        <button class="save-btn" id="jpeg" type="button" value="8" onclick="exportImage('jpg')">JPEG</button>
+            <div class="height-10px"></div>
+        <button class="save-btn" id="gif" type="button" value="8" onclick="exportImage('gif')">GIF</button>
+         </div>
+
+
 
     </div>
 
     <!--Left Sidebar-->
-    <div class="sidebar-left">
+    <div class="sidebar-right">
 
-        <button class="pencil-btn" type="button" onclick="pencilTrue()">Pencil</button>
 
-        <button class="eraser-btn" type="button" onclick="eraserTrue()">Eraser</button>
 
-        <button class="bucket-btn" type="button" onclick="bucketTrue()">Bucket</button>
+        <button class="pencil-btn" type="button" onclick="pencilTool()">Pencil</button>
+
+        <button class="eraser-btn" type="button" onclick="eraserTool()">Eraser</button>
+
+        <button class="bucket-btn" type="button" onclick="bucketTool()">Bucket</button>
+
+
+        <div>
+
+            <button class="clear-btn" type="button" onclick="resetGrid ()">Clear</button>
+        </div>
+
+
+
+
+
     </div>
 
+    <div class="outer-container">
     <!--Grid Container-->
     <div class="container">
     </div>
 
-</div>
+    </div>
+
+<script src="dom-to-image.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -4,20 +4,22 @@
 
 Folgende Technolgien / Frameworks setze ich in meinem Projekt ein:
 
-- JavaScript / jQuery
-- PHP / Symfony
-- ...
+- JavaScript
+- CSS 
+- HTML
 
-Ich habe mich für jQuery entschieden, weil ...
-
+Ich habe mich hier nur für Javascript, HTML und CSS entschieden, da ich denke, dass ich mehr für ein Pixel Art Generator nicht benötige.
+Javascript habe ich für die Funktionen benutzt, wie das Erstellen von DIVs / Pixeln anhand der eingegebenen Grid Größe im Input Feld.
+HTML habe ich für das Erstellen der Webpage und des GRIDs vewendet. 
+CSS habe ich zum gestalten der Webpage habe ich.
 ## Eingesetzte 3rd Party Libraries
 
 Ich setze in meinem Projekt die folgenden 3rd Party Libraries ein: (falls keine, Tabelle entfernen und begründen warum)
 
 Name | Begründung
 --- | ---
-[moment.js](https://momentjs.com/) | Zur Berechnung von Datumswertung und Umwandlung von Formaten.
-[Bootstrap](https://getbootstrap.com/) | Einfaches RWD Framework zur Gestaltung des Frontends
+[html2canvas](https://html2canvas.hertzen.com/) | ...
+
 
 ## Installation / Ausführen des Projektes
 
